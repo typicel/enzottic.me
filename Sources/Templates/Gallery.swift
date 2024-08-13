@@ -10,7 +10,7 @@ import Html
 
 struct Gallery: Page {
     var title: String
-    var pageContent: Html.Node
+    var pageContent: Node
 
     var body: Html.Node {
         .main(
