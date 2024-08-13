@@ -39,7 +39,7 @@ extension Website {
         var parser = MarkdownToHTMLParser()
         let html = parser.visit(document)
         
-        return Webpage(title: file.lastPathComponent.replacingOccurrences(of: ".md", with: "").capitalized, pageContent: html)
+        return Webpage(title: file.lastPathComponent.replacingOccurrences(of: ".md", with: ""), pageContent: html)
     }
 
     static func generateGalleryPage() {
@@ -54,7 +54,7 @@ extension Website {
             )
         }
         
-        let gallery = Gallery(title: "Gallery", pageContent: .fragment(html))
+        let gallery = Gallery(title: "gallery", pageContent: .fragment(html))
         generateHtml(for: gallery)
     }
      

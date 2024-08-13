@@ -18,7 +18,7 @@ extension Page {
     var content: Node {
         .html(
             .head(
-                .title(self.title),
+                .title("enzo"),
                 .meta(attributes: [.charset(.utf8)]),
                 .meta(attributes: [.init("http-equiv", "X-UA-Compatible"), .init("content", "IE=edge")]),
                 .meta(attributes: [.init("name", "viewport"), .content("width=device-width, initial-scale=1.0")]),
