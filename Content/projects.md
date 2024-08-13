@@ -22,9 +22,14 @@ A spaced-repetition based language learning app that lets you learn by reading w
     <img src="./images/lexel2.jpeg" width="500" style="border-radius: 5px;">
 </div>
 
+## This Website
+This website was created using a static site generator written in Swift.
+[View on GitHub](https://github.com/typicel/enzottic.me)
+
 ## OpenGL Game Engine
 C++ OpenGL game engine. Uses Dear ImGui for UI and Box2D for physics. Not being worked on anymore.
 [View on Github](https://github.com/typicel/opengl-game)
+
 
 ## Schoolweek
 A task management web app built with React. Not being worked on anymore.
