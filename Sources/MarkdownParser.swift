@@ -21,6 +21,14 @@ func Link(attributes: [Attribute<Tag.A>] = [], _ content: [Node]) -> Node {
     return .element("a", attributes: attributes, .fragment(content))
 }
 
+func Strong(attributes: [Attribute<Tag.Strong>] = [], _ content: [Node]) -> Node {
+    return .element("strong", attributes: attributes, .fragment(content))
+}
+
+func Emphasis(attributes: [Attribute<Tag.Em>] = [], _ content: [Node]) -> Node {
+    return .element("em", attributes: attributes, .fragment(content))
+}
+
 func Header(_ heading: Markdown.Heading, attributes: [Attribute<Tag.Header>] = [], _ content: [Node]) -> Node {
     switch heading.level {
     case 1:
@@ -44,13 +52,13 @@ struct MarkdownToHTMLParser: MarkupVisitor {
     typealias Result = Node
     
     mutating func defaultVisit(_ markup: any Markup) -> Node {
-        let transformed: [Node] = markup.children.map { visit($0) }
-        return Div(transformed)
+        let children = markup.children.map { visit($0) }
+        return Div(children)
     }
     
     mutating func visitParagraph(_ paragraph: Paragraph) -> Node {
-        let transofrmed: [Node] = paragraph.children.map { visit($0) }
-        return Paragraph(transofrmed)
+        let children = paragraph.children.map { visit($0) }
+        return Paragraph(children)
     }
     
     mutating func visitText(_ text: Markdown.Text) -> Node {
@@ -66,10 +74,23 @@ struct MarkdownToHTMLParser: MarkupVisitor {
         .code("\(inlineCode.code)")
     }
     
+    mutating func visitStrong(_ strong: Strong) -> Node {
+        let children = strong.children.map { visit($0) }
+        return Strong(children)
+    }
+    
+    mutating func visitEmphasis(_ emphasis: Emphasis) -> Node {
+        let children = emphasis.children.map { visit($0) }
+        return Emphasis(children)
+    }
+
     mutating func visitLink(_ link: Link) -> Node {
         let content = link.children.map { visit($0) }
         return Link(attributes: [.href(link.destination ?? "")], content)
     }
     
+    func visitHTMLBlock(_ html: HTMLBlock) -> Node {
+        return .raw(html.rawHTML)
+    }
 }
 

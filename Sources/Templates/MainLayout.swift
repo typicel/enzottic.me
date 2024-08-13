@@ -12,14 +12,7 @@ struct Webpage: Page {
     var pageContent: Node
     
     var body: Html.Node {
-        .div(
-            .nav(
-                .a(attributes: [.href("/")], "Home"),
-                .a(attributes: [.href("/now")], "Now"),
-                .a(attributes: [.href("/projects")], "Projects"),
-                .a(attributes: [.href("/gallery")], "Gallery")
-            ),
-            
+        .main(
             pageContent
         )
     }

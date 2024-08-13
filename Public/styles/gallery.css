@@ -1,0 +1,29 @@
+.grid > div > p {
+    padding: 3px;
+    margin: 0px;
+}
+
+body {
+    max-width: 100rem;
+}
+
+.grid {
+    user-select: none;
+}
+
+.zoom-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.grid-sizer,
+.grid-item {
+    width: 20%;
+}
+
+.caption {
+    color: #93969a
+}
+
+@media only screen and (max-width: 800px) { .gallery-masonry .gallery-masonry-item img, .gallery-masonry-wrapper.gallery-masonry-list--ready, .gallery-masonry-item-wrapper { width: 100% !important; height: auto !important; }}
+@media only screen and (max-width: 800px) { figure.gallery-masonry-item { transform: unset !important; width: 100% !important; padding-bottom: 25px !important; position: relative !important;}}
+
