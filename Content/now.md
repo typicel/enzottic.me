@@ -1,7 +1,7 @@
 # What I'm Doing Now
 
-## Job Hunting
-I am currently open to full-time work as a software engineer. I am particularly focused on iOS development, but I am open to all other opportunities as well. If you are interested in hiring me, you can contact me at `mail @ this domain` and I can send you my resume. Thank you!
+## Work (soon)
+I am starting full time work as a software engineer in December, so that is going to take up most of my time.
 
 ## Loopover
 Loopover is a 2D puzzle game for iOS devices. You can view more about it on my [projects](/projects) page. Current development is focusing on a statistics page that lets you view averages for recent solves for time and number of moves. I am also looking into support for GameKit leaderboards and achievements. I would also like to add animations for moves to make the game feel a bit more fluid and responsive.

@@ -28,7 +28,7 @@ extension Page {
                 ),
                 self.body,
                 .footer(
-                    .p("© enzo 20XX • last modified 8/12/2024")
+                    .p("© enzo 20XX • last modified 11/16/2024")
                 )
             )
         )

@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:enzottic.me.m}",
+            "name": "Debug enzottic.me.m",
+            "program": "${workspaceFolder:enzottic.me.m}/.build/debug/enzottic.me.m",
+            "preLaunchTask": "swift: Build Debug enzottic.me.m"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:enzottic.me.m}",
+            "name": "Release enzottic.me.m",
+            "program": "${workspaceFolder:enzottic.me.m}/.build/release/enzottic.me.m",
+            "preLaunchTask": "swift: Build Release enzottic.me.m"
+        }
+    ]
+}
